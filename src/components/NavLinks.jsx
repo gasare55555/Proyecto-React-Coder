@@ -1,6 +1,6 @@
 import "./NavLinks.css"
 
-function NavLinks(){
+function NavLinks() {
   return(
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
@@ -15,7 +15,7 @@ function NavLinks(){
         </li>
       </ul>
     </div>
-  );
+  )
 }
 
 export default NavLinks
