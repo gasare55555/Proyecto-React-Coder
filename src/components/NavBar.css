@@ -1,0 +1,15 @@
+.container-fluid {
+  padding-inline: 38px;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    order: 1;
+  }
+  .navbar-collapse {
+    order: 2;
+  }
+  #cart-toggle {
+    order: 3;
+  }
+}

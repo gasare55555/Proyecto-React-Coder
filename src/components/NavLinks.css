@@ -1,3 +1,9 @@
 .navbar-collapse {
     flex-grow: unset;
 }
+
+@media (min-width: 992px) {
+    .nav-link {
+        padding-inline: 38px !important;
+    }
+}

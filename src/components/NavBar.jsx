@@ -1,7 +1,7 @@
 import CartWidget from "./CartWidget"
 import NavLinks from "./NavLinks"
 import NavLogo from "./NavLogo"
-import NavToggle from "./NavToggle"
+import NavToggler from "./NavToggler"
 import "./NavBar.css"
 
 function NavBar() {
@@ -9,11 +9,11 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <NavLogo />
-        <div className="d-flex">
-          <NavLinks />
+        <div id="cart-toggle" className="d-flex">
           <CartWidget />
-          <NavToggle />
+          <NavToggler />
         </div>
+        <NavLinks />
       </div>
     </nav>
   )
