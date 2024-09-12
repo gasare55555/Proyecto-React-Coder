@@ -1,3 +1,9 @@
 #greeting-container {
   padding: 64px 0;
 }
+
+#greeting-container h1{
+  font-family: "NotoSansMarchen";
+  font-size: var(--h1-size);
+  color: var(--accent-color);
+}

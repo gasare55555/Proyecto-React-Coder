@@ -1,9 +1,15 @@
-.navbar-collapse {
-    flex-grow: unset;
+.nav-link {
+    font-family: "NotoSansMarchen";
+    font-size: var(--p-size);
+    color: var(--primary-color);
 }
 
 @media (min-width: 992px) {
+    .navbar-collapse {
+        flex-grow: unset;
+        margin-left: -15%;
+    }
     .nav-link {
-        padding-inline: 38px !important;
+        padding-inline: 24px !important;
     }
 }

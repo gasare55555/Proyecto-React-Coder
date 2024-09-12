@@ -6,7 +6,7 @@ import "./NavBar.css"
 
 function NavBar() {
   return(
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <NavLogo />
         <div id="cart-toggle" className="d-flex">

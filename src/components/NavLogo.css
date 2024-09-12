@@ -1,3 +1,7 @@
 .navbar-brand {
     margin-right: unset;
 }
+
+.navbar-brand img {
+    width: 224px;
+}

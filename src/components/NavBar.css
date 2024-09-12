@@ -1,3 +1,7 @@
+.navbar {
+  background-color: var(--background-color);
+}
+
 .container-fluid {
   padding-inline: 38px;
 }
