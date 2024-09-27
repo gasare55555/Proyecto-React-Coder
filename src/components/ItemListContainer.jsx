@@ -1,9 +1,9 @@
 import "./ItemListContainer.css"
 
-function ItemListContainer({greeting}) {
+function ItemListContainer() {
   return(
-    <div id="greeting-container">
-      <h1>{greeting}</h1>
+    <div id="items-container">
+      
     </div>
   )
 }
