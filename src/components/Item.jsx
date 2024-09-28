@@ -1,6 +1,8 @@
-function Item() {
+function Item({product}) {
   return (
-    <></>
+    <>
+      <h2>{product.name}</h2>
+    </>
   )
 }
 
