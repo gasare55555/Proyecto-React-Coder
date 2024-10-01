@@ -1,0 +1,16 @@
+.card-img-top {
+  aspect-ratio: 284 / 350;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#card-button {
+  margin-top: 18px;
+  align-self: center;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}

@@ -1,32 +1,15 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getData } from "../asyncMock";
-import { getCategory } from "../asyncMock";
 import Item from "./Item";
 
-const{id} = useParams();
-const [category, setCategory] = useState();
-
-function ItemList() {
-  useEffect(() => {
-    async function fetchData() {
-      const response = await getData;
-      const parsedResponse = JSON.parse(response);
-      const data = getCategory(id, parsedResponse).content;
-      setCategory(data);
-    }
-  fetchData();
-  }, []);
-
+function ItemList({category}) {
   return (
-    <ul>
-      {category.map((product) => (
-        <Item key={product.id} product={product} />
-      ))}
-
-    </ul>
+    <section className="container text-center">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        {category.map((product) => (
+          <Item key={product.id} product={product} />
+        ))}
+      </div>
+    </section>
   )
-  
 }
 
 export default ItemList;

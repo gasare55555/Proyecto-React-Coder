@@ -12,6 +12,8 @@
   }
   .navbar-collapse {
     order: 2;
+    flex-grow: unset;
+    margin-left: -15%;
   }
   #cart-toggle {
     order: 3;

@@ -1,0 +1,24 @@
+.detail-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.detail-card {
+  /* width: 320px; */
+  padding: 16px; 
+}
+
+.detail-body {
+  gap: 8px;
+}
+
+.detail-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-text {
+  max-width: 120px;
+  text-align: end;
+}
