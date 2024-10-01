@@ -18,8 +18,8 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <NavCategory id="popular" name="Popular Now" />
-            <NavCategory id="most-anticipated" name="Most Anticipated" />
-            <NavCategory id="explore" name="Explore" />
+            <NavCategory id="anticipated" name="Most Anticipated" />
+            <NavCategory id="educational" name="Educational" />
           </ul>
         </div>
 

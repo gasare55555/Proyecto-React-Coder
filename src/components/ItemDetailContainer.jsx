@@ -21,11 +21,11 @@ function ItemDetailContainer() {
         const platformValues = getValues(data, "platforms", "name");
         platformValues && setPlatforms(platformValues);
       }
-      console.log(item);
-
     }
     fetchData();
   }, []);
+  
+  console.log(item);
 
   return (
     <div>

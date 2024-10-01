@@ -1,4 +1,6 @@
 import { popularGames } from "./emulated-server-files/popular-games";
+import { anticipatedGames } from "./emulated-server-files/anticipated-games";
+import { educationalGames } from "./emulated-server-files/educational-games";
 
 const data = JSON.stringify([
   {
@@ -7,7 +9,11 @@ const data = JSON.stringify([
   },
   {
     id: "anticipated",
-    content: "mostAnticipated"
+    content: anticipatedGames
+  },
+  {
+    id: "educational",
+    content: educationalGames
   }
 ]); 
 

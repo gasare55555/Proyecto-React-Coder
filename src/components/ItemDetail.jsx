@@ -6,7 +6,7 @@ function ItemDetail({item, genres, platforms}) {
       <div className="card detail-card">
         <img src={item.cover} className="card-img-top" alt={`${item.cover} cover image`} />
         <div className="card-body detail-body">
-          <h2 className="card-title">{item.name}</h2>
+          <h2 className="card-title mb-3">{item.name}</h2>
 
           <div className="detail-section">
             <h5 className="card-subtitle">Genres</h5>

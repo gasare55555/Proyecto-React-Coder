@@ -13,11 +13,12 @@ function ItemListContainer() {
       const response = await getData;
       const parsedResponse = JSON.parse(response);
       const data = getCategory(id, parsedResponse);
-      console.log(data);
       data && setCategory(data);
     }
     fetchData();
-  }, []);
+  }, [id]);
+
+  console.log(category);
 
   return(
     <div id="items-container">
