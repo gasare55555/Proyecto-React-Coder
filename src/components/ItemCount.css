@@ -1,0 +1,17 @@
+.counter-container {
+  padding-bottom: 24px;
+}
+
+.add-btn {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.counter-btn {
+  padding-inline: 16px;
+  background-color: var(--background-color);
+}
+
+.counter {
+  padding-inline: 12px;
+}

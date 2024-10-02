@@ -3,7 +3,13 @@
 }
 
 .container-fluid {
-  padding-inline: 38px;
+  padding-inline: 16px;
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+    padding-inline: 38px;
+  }
 }
 
 @media (min-width: 992px) {

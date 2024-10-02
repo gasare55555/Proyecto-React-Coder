@@ -58,7 +58,7 @@ export const anticipatedGames = [
     {
         "id": 262186,
         "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727811543/1282866981_IGDB-272x380_r4t9qs.jpg",
-        "price": "free",
+        "price": "Free",
         "genres": [
             {
                 "id": 5,

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getData, getCategory } from "../asyncMock";
+import { getData, getCategory, getAllCategories } from "../asyncMock";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 import ItemList from "./ItemList";
@@ -12,8 +12,13 @@ function ItemListContainer() {
     async function fetchData() {
       const response = await getData;
       const parsedResponse = JSON.parse(response);
-      const data = getCategory(id, parsedResponse);
-      data && setCategory(data);
+      if (id) {
+        const data = getCategory(id, parsedResponse);
+        data && setCategory(data);
+      } else {
+        const data = getAllCategories(parsedResponse);
+        data && setCategory(data);
+      }
     }
     fetchData();
   }, [id]);

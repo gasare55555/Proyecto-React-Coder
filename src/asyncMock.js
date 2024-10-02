@@ -30,6 +30,15 @@ export function getCategory(id, parsedResponse) {
   }
 }
 
+export function getAllCategories(parsedResponse) {
+  const categories = parsedResponse.map((category) => category.content);
+  const data = [];
+  categories.forEach((category) => {
+    category.forEach((object) => data.push(object));
+  });
+  return data;
+}
+
 export function getItem(id, parsedResponse) {
   let data;
 

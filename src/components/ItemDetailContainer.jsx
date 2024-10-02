@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getData, getItem, getValues } from "../asyncMock";
 import ItemDetail from "./ItemDetail";
+import ItemCount from "./ItemCount";
 
 function ItemDetailContainer() {
   const {id} = useParams();
@@ -23,13 +24,14 @@ function ItemDetailContainer() {
       }
     }
     fetchData();
-  }, []);
-  
+  }, [id]);
+
   console.log(item);
 
   return (
     <div>
       <ItemDetail item={item} genres={genres} platforms={platforms} />
+      <ItemCount />
     </div>
   )
 }
