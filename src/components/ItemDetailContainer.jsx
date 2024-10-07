@@ -9,6 +9,7 @@ function ItemDetailContainer() {
   const [item, setItem] = useState({});
   const [genres, setGenres] = useState([]);
   const [platforms, setPlatforms] = useState([]);
+  const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -21,6 +22,13 @@ function ItemDetailContainer() {
         genreValues && setGenres(genreValues);
         const platformValues = getValues(data, "platforms", "name");
         platformValues && setPlatforms(platformValues);
+        const videoValues = getValues(data, "videos", "video_id");
+        if (videoValues && videoValues.length > 3) {
+          videoValues.splice(5);
+          setVideos(videoValues);
+        } else if (videoValues) {
+          setVideos(videoValues);
+        }
       }
     }
     fetchData();
@@ -30,8 +38,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <ItemDetail item={item} genres={genres} platforms={platforms} />
-      <ItemCount />
+      <ItemDetail item={item} genres={genres} platforms={platforms} videos={videos} /> 
     </div>
   )
 }
