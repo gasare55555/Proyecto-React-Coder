@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getData, getItem, getValues } from "../asyncMock";
 import ItemDetail from "./ItemDetail";
-import ItemCount from "./ItemCount";
 
 function ItemDetailContainer() {
   const {id} = useParams();
