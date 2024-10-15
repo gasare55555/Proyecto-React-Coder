@@ -5,10 +5,10 @@ import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
   const {id} = useParams();
-  const [item, setItem] = useState({});
-  const [genres, setGenres] = useState([]);
-  const [platforms, setPlatforms] = useState([]);
-  const [videos, setVideos] = useState([]);
+  const [item, setItem] = useState();
+  const [genres, setGenres] = useState();
+  const [platforms, setPlatforms] = useState();
+  const [videos, setVideos] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -28,6 +28,8 @@ function ItemDetailContainer() {
         } else if (videoValues) {
           setVideos(videoValues);
         }
+      } else {
+        alert("Product not available");
       }
     }
     fetchData();
@@ -37,7 +39,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <ItemDetail item={item} genres={genres} platforms={platforms} videos={videos} /> 
+      {item && <ItemDetail item={item} genres={genres} platforms={platforms} videos={videos} />} 
     </div>
   )
 }

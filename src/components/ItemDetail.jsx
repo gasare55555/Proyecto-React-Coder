@@ -5,8 +5,8 @@ import threeStars from "../assets/three-stars.svg";
 import fourStars from "../assets/four-stars.svg";
 import fiveStars from "../assets/five-stars.svg";
 import thumbsUp from "../assets/thumbs-up.svg";
-import ItemCount from "./ItemCount";
 import DetailVideos from "./DetailVideos";
+import CartSubmitContainer from "./CartSubmitContainer";
 
 function ItemDetail({item, genres, platforms, videos}) {
   function ratingStars(rating) {
@@ -57,13 +57,16 @@ function ItemDetail({item, genres, platforms, videos}) {
           <div className="card-body detail-body">
             <p className="card-text">{item.summary}</p>
             <h5 className="card-subtitle mb-3">Watch trailers</h5>
+
             <div className="detail-videos mb-3">
               <div className="rounded-container">
                 {videos.map((video) => 
                 <DetailVideos key={video} video={video} /> )}
               </div>    
-            </div>
-              <ItemCount />
+            </div >
+            
+            <CartSubmitContainer item={item} />
+            
           </div>
         </div>
       </div>

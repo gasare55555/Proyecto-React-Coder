@@ -1,0 +1,35 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.cart-item-left {
+  display: flex;
+  gap: 24px;
+}
+
+.cart-item-left img {
+  aspect-ratio: 284 / 350;
+  width: 140px;
+  border-radius: 8px;
+}
+
+.cart-item-left div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 24px;
+}
+
+.cart-eliminar {
+  width: fit-content;
+  padding: 2px 8px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.cart-item-right {
+  display: flex;
+}

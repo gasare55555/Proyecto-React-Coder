@@ -1,7 +1,3 @@
-.counter-container {
-  padding-bottom: 48px;
-}
-
 .add-btn {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
