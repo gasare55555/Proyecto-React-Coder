@@ -1,29 +1,13 @@
 import "./CartItem.css";
-import { useContext, useState, useRef } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { useCount } from "../hooks/useCount";
 import ItemQuantitySelector from "./ItemQuantitySelector";
+
 
 function CartItem({item, removeItem}) {
   const {addItem} = useContext(CartContext);
-  const [counter, setCounter] = useState(0);
-  const initialStock = useRef(10);
-  const stock = useRef(initialStock.current);
-
-  function handleDecrement() {
-    if (counter > 0) {
-      setCounter(counter - 1);
-      stock.current++;
-      console.log(stock.current);
-    }
-  }
-
-  function handleIncrement() {
-    if (counter < initialStock.current) {
-      setCounter(counter + 1);
-      stock.current--;
-      console.log(stock.current);
-    }
-  }
+  const {counter, handleDecrement, handleIncrement} = useCount(item.quantity, 10);
   
   function onAdd() {
     if (counter > 0) {
@@ -39,6 +23,7 @@ function CartItem({item, removeItem}) {
   return (
     <div className="card">
       <div className="card-body cart-item">
+
         <div className="cart-item-left">
           <img src={item.cover} alt={`${item.name} game image`} />
           <div>
@@ -48,9 +33,8 @@ function CartItem({item, removeItem}) {
         </div>
 
         <div className="cart-item-right">
-          <div>
             <ItemQuantitySelector handleDecrement={handleDecrement} handleIncrement={handleIncrement} counter={counter} />
-          </div>
+            <h4 className="card-text">{item.price.replace("USD", "")}</h4>
         </div>
       </div>
     </div>

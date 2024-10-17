@@ -6,7 +6,7 @@ import fourStars from "../assets/four-stars.svg";
 import fiveStars from "../assets/five-stars.svg";
 import thumbsUp from "../assets/thumbs-up.svg";
 import DetailVideos from "./DetailVideos";
-import CartSubmitContainer from "./CartSubmitContainer";
+import SelectAddContainer from "./SelectAddContainer";
 
 function ItemDetail({item, genres, platforms, videos}) {
   function ratingStars(rating) {
@@ -65,7 +65,7 @@ function ItemDetail({item, genres, platforms, videos}) {
               </div>    
             </div >
             
-            <CartSubmitContainer item={item} />
+            <SelectAddContainer item={item}/>
             
           </div>
         </div>

@@ -1,3 +1,12 @@
+.selector-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  border: 2px solid var(--background-color);
+  border-radius: 12px;
+  padding-block: 1px;
+}
+
 .add-btn {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
@@ -9,5 +18,8 @@
 }
 
 .counter {
-  padding-inline: 12px;
+  background-color: white;
+  padding-inline: 14px;
+  padding-block: 4px;
+  border-radius: 8px;
 }

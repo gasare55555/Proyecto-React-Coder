@@ -1,5 +1,6 @@
 .cart-item {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 24px;
 }
@@ -32,4 +33,7 @@
 
 .cart-item-right {
   display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 16px;
 }
