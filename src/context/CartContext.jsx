@@ -39,6 +39,16 @@ export function CartProvider({children}) {
     }
   }
 
+  function calculateTotalPrice() {
+    let totalPrice = 0;
+    cart.forEach(item => {
+      if (item.price) {
+        totalPrice = totalPrice + (item.price*item.quantity);
+      } 
+    }); 
+    return totalPrice.toFixed(2);
+  }
+
   function removeItem(itemId) {
     const filteredCart = cart.filter((item) => item.id != itemId);
     if (cart.length != filteredCart.length) {
@@ -53,7 +63,7 @@ export function CartProvider({children}) {
   }
 
   return (
-    <CartContext.Provider value={{addItem, getItemQuantity, removeItem, clear, cart}}>
+    <CartContext.Provider value={{addItem, getItemQuantity, calculateTotalPrice, removeItem, clear, cart}}>
       {children}
     </CartContext.Provider>
   );

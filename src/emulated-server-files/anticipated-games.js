@@ -2,7 +2,7 @@ export const anticipatedGames = [
     {
         "id": 298915,
         "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727810688/co84b9_p0egvk.webp",
-        "price": "Free",
+        "price": 0,
         "genres": [
             {
                 "id": 5,
@@ -58,7 +58,7 @@ export const anticipatedGames = [
     {
         "id": 262186,
         "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727811543/1282866981_IGDB-272x380_r4t9qs.jpg",
-        "price": "Free",
+        "price": 0,
         "genres": [
             {
                 "id": 5,
@@ -129,7 +129,7 @@ export const anticipatedGames = [
     {
         "id": 101440,
         "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727812012/STALKER_2_cover_art_kptqhv.jpg",
-        "price": "$42.99 USD",
+        "price": 42.99,
         "genres": [
             {
                 "id": 5,
@@ -232,7 +232,7 @@ export const anticipatedGames = [
     {
         "id": 81249,
         "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727813217/kgklfntxgz511_efovsy.jpg",
-        "price": "Undefined",
+        "price": 59.99,
         "genres": [
             {
                 "id": 12,
@@ -279,7 +279,7 @@ export const anticipatedGames = [
     {
         "id": 300976,
         "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727814176/Assassin_27s_Creed_Shadows_cover_ayzkbh.png",
-        "price": "$55.54 USD",
+        "price": 55.54,
         "genres": [
             {
                 "id": 12,

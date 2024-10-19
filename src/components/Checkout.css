@@ -1,8 +1,14 @@
-.cart-items-container {
+.checkout-container {
   padding: 32px;
+}
+
+.checkout-upper-side {
+  display: flex;
+  gap: 32px;
 }
 
 .cart-title {
   text-align: start;
   color: var(--accent-color);
+  padding-bottom: 16px;
 }

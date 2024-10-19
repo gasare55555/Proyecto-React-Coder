@@ -1,8 +1,15 @@
+.cart-item-container {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  margin-bottom: 32px;
+}
+
 .cart-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 24px;
+  padding: 24px; 
+  text-align: start; 
 }
 
 .cart-item-left {
@@ -26,9 +33,10 @@
 
 .cart-eliminar {
   width: fit-content;
-  padding: 2px 8px;
-  color: var(--primary-color);
-  border-color: var(--primary-color);
+  padding: 4px 8px;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-width: 1.5px;
 }
 
 .cart-item-right {

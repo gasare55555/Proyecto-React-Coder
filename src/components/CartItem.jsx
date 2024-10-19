@@ -21,7 +21,7 @@ function CartItem({item, removeItem}) {
   }
 
   return (
-    <div className="card">
+    <div className="card cart-item-container">
       <div className="card-body cart-item">
 
         <div className="cart-item-left">
@@ -34,7 +34,7 @@ function CartItem({item, removeItem}) {
 
         <div className="cart-item-right">
             <ItemQuantitySelector handleDecrement={handleDecrement} handleIncrement={handleIncrement} counter={counter} />
-            <h4 className="card-text">{item.price.replace("USD", "")}</h4>
+            <h4 className="card-text">${item.price.toFixed(2)}</h4>
         </div>
       </div>
     </div>

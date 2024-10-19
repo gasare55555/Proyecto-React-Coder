@@ -1,6 +1,8 @@
-function AddItemButton({onAdd}) {
+import "./AddItemButton.css"
+
+function AddItemButton({action, content}) {
   return (
-    <button type="button" className="btn btn-primary add-btn" onClick={onAdd}>Agregar al carrito</button>
+    <button type="button" className="btn btn-primary add-btn" onClick={action}>{content}</button>
   );
 }
 
