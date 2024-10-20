@@ -3,12 +3,27 @@
 }
 
 .checkout-upper-side {
-  display: flex;
+  display: grid;
   gap: 32px;
+}
+
+.checkout-left-side {
+  display: grid;
+  gap: 48px;
+}
+
+.cart-total-container {
+  min-width: 336px;
 }
 
 .cart-title {
   text-align: start;
   color: var(--accent-color);
   padding-bottom: 16px;
+}
+
+@media (min-width: 992px) {
+  .checkout-upper-side {
+    grid-template-columns: 2fr 1fr;
+  }
 }

@@ -1,17 +1,12 @@
-.cart-total-container-inside {
+.cart-form-container-inside {
   background-color: var(--background-color);
 }
 
-.cart-total {
+.cart-form {
   padding-inline: 32px;
   padding-block: 48px;
   text-align: start;
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.cart-total-price {
-  display: flex;
-  justify-content: space-between;
 }

@@ -30,6 +30,16 @@ export function CartProvider({children}) {
     }
   }
 
+  function getCartQuantity() {
+    let cartQuantity = 0;
+    if (cart.length) {
+      cart.forEach(item => {
+        cartQuantity = cartQuantity + item.quantity;
+      });
+    }
+    return cartQuantity;
+  }
+
   function getItemQuantity(itemId) {
     const result = cart.find((item) => item.id == itemId);
     if (result) {
@@ -63,7 +73,7 @@ export function CartProvider({children}) {
   }
 
   return (
-    <CartContext.Provider value={{addItem, getItemQuantity, calculateTotalPrice, removeItem, clear, cart}}>
+    <CartContext.Provider value={{addItem, getCartQuantity, getItemQuantity, calculateTotalPrice, removeItem, clear, cart}}>
       {children}
     </CartContext.Provider>
   );

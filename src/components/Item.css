@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 
+.card-title, .card-subtitle, .card-text, .card-body {
+  color: var(--primary-color);
+}
+
 #card-button {
   margin-top: 18px;
   align-self: center;

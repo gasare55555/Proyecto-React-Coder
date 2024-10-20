@@ -12,7 +12,7 @@ function CartTotal() {
           <h4 className="card-title">Estimated total</h4>
           <h4 className="card-text">${calculateTotalPrice()}</h4>
         </div>
-        <p className="card-text">Sales tax will be calculated during checkout where applicable</p>
+        <p className="card-text w-100">Sales tax will be calculated during checkout where applicable</p>
         <AddItemButton content="Realizar compra" />
       </div>
 

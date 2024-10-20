@@ -20,5 +20,5 @@ export function useCount(initialCounter, initialStock) {
     }
   }
 
-  return {counter, handleDecrement, handleIncrement};
+  return {counter, setCounter, handleDecrement, handleIncrement};
 }

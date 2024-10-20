@@ -5,13 +5,13 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 function CartWidget() {
-  const {cart} = useContext(CartContext);
+  const {getCartQuantity} = useContext(CartContext);
   return(
     <div id="cart-widget">
       <Link to={"/cart"}>
         <img src={cartPic} alt="buy cart" width="48"/>
       </Link>
-      <span className="notification">{cart.length}</span>
+      <span className="notification">{getCartQuantity()}</span>
     </div>
   );
 }
