@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, getDocs, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDOIoaZHOOMcTdKhtWvP29w3zYdfV6F78I",
@@ -13,6 +13,20 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
+
+//obtener toda una colección
+export async function getCollection(colPath) {
+  const colRef = collection(db, colPath);
+  try {
+    const querySnapshot = await getDocs(colRef);
+    if (querySnapshot.size) {
+      
+    }
+  } catch (error) {
+    
+  }
+}
+
 
 //enviar un nuevo documento a cualquier colección
 export async function sendDoc(obj, colPath) {
