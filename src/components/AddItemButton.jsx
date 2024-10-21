@@ -1,8 +1,8 @@
 import "./AddItemButton.css"
 
-function AddItemButton({action, content}) {
+function AddItemButton({action, content, type}) {
   return (
-    <button type="button" className="btn btn-primary add-btn" onClick={action}>{content}</button>
+    <button type={type} className="btn btn-primary add-btn" onClick={action}>{content}</button>
   );
 }
 

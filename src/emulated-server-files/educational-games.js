@@ -3,6 +3,8 @@ export const educationalGames = [
     "id": 243,
     "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727817335/Who_Wants_to_Be_a_Millionaire__281999_video_game_29_Cover_j53khu.webp",
     "price": 29.99,
+    "stock": 10,
+    "category": "educational",
     "genres": [
         {
             "id": 26,
@@ -43,6 +45,8 @@ export const educationalGames = [
     "id": 251,
     "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727817562/Treasures_of_Knowledge_cover_exbrwi.gif",
     "price": 9.99,
+    "stock": 10,
+    "category": "educational",
     "genres": [
         {
             "id": 9,
@@ -135,6 +139,8 @@ export const educationalGames = [
     "id": 293,
     "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727817884/CivIVboxshot_etnqki.jpg",
     "price": 19.99,
+    "stock": 10,
+    "category": "educational",
     "genres": [
         {
             "id": 13,
@@ -191,6 +197,8 @@ export const educationalGames = [
     "id": 1964,
     "cover": "https://res.cloudinary.com/dg8infxse/image/upload/v1727818253/s-l400_tvzjuj.jpg",
     "price": 9.79,
+    "stock": 10,
+    "category": "educational",
     "genres": [
         {
             "id": 8,
@@ -238,6 +246,8 @@ export const educationalGames = [
     "id": 2186,
     "cover": "https://res.cloudinary.com/dg8infxse/image/upload/c_pad,w_284/v1727818649/61BXnD1IQnL_uxheog.jpg",
     "price": 16.25,
+    "stock": 10,
+    "category": "educational",
     "genres": [
         {
             "id": 13,
