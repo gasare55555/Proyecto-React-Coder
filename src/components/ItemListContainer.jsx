@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { getData, getCategory, getAllCategories } from "../asyncMock";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
 import ItemList from "./ItemList";
+import { filterCollection, getCollection } from "../firebase/firebase";
 
 function ItemListContainer() {
   const {id} = useParams();
@@ -10,13 +10,11 @@ function ItemListContainer() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await getData;
-      const parsedResponse = JSON.parse(response);
       if (id) {
-        const data = getCategory(id, parsedResponse);
+        const data = await filterCollection("items", "category", id);
         data && setCategory(data);
       } else {
-        const data = getAllCategories(parsedResponse);
+        const data = await getCollection("items");
         data && setCategory(data);
       }
     }

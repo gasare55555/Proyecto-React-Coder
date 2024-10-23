@@ -10,6 +10,7 @@ export function useCount(initialCounter, initialStock) {
       stock.current++;
       console.log(stock.current);
     }
+    return counter;
   }
 
   function handleIncrement() {
@@ -18,6 +19,7 @@ export function useCount(initialCounter, initialStock) {
       stock.current--;
       console.log(stock.current);
     }
+    return counter;
   }
 
   return {counter, setCounter, handleDecrement, handleIncrement};

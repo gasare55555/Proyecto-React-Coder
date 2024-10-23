@@ -1,24 +1,21 @@
 import "./CartItem.css";
-import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
-import { useCount } from "../hooks/useCount";
 import ItemQuantitySelector from "./ItemQuantitySelector";
+import { useEffect } from "react";
+import { useCount } from "../hooks/useCount";
 
-
-function CartItem({item, removeItem}) {
-  const {addItem} = useContext(CartContext);
+function CartItem({item, addItem2, removeItem}) {
   const {counter, handleDecrement, handleIncrement} = useCount(item.quantity, 10);
   
-  function onAdd() {
-    if (counter > 0) {
-      // alert(`Ha ingresado ${counter} items al carrito`);
-      addItem(item, counter);
-    }
-  }
+  useEffect(() => {
+      console.log(`counter ${counter}`);
+      addItem2(item, counter);
+  }, [counter]);
 
   function handleRemove() {
     removeItem(item.id);
   }
+
+  console.log("CartItem re-render");
 
   return (
     <div className="card cart-item-container">

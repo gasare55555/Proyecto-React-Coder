@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getData, getItem, getValues } from "../asyncMock";
 import ItemDetail from "./ItemDetail";
+import { getDocument, getValues } from "../firebase/firebase";
 
 function ItemDetailContainer() {
   const {id} = useParams();
@@ -12,9 +12,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await getData;
-      const parsedResponse = JSON.parse(response);
-      const data = getItem(id, parsedResponse);
+      const data = await getDocument("items", id);
       if (data) {
         setItem(data);
         const genreValues = getValues(data, "genres", "name");

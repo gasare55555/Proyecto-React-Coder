@@ -30,6 +30,22 @@ export function CartProvider({children}) {
     }
   }
 
+  function addItem2(item, quantity) {
+    if (!isInCart(item.id)) {
+      setCart([...cart, {...item, quantity: quantity}]);
+    } 
+    else {
+      const modifiedCart = cart.map((cartItem) => {
+        if (cartItem.id == item.id) {
+          return {...cartItem, quantity: quantity};
+        } else {
+          return cartItem;
+        }
+      });
+      setCart(modifiedCart);
+    }
+  }
+
   function getCartQuantity() {
     let cartQuantity = 0;
     if (cart.length) {
@@ -73,7 +89,7 @@ export function CartProvider({children}) {
   }
 
   return (
-    <CartContext.Provider value={{addItem, getCartQuantity, getItemQuantity, calculateTotalPrice, removeItem, clear, cart}}>
+    <CartContext.Provider value={{addItem, addItem2, getCartQuantity, getItemQuantity, calculateTotalPrice, removeItem, clear, cart}}>
       {children}
     </CartContext.Provider>
   );
