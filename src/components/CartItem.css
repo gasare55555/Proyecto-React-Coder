@@ -1,4 +1,6 @@
 .cart-item-container {
+  display: flex;
+  justify-content: center;
   background-color: var(--background-color);
   margin-bottom: 32px;
 }
@@ -43,4 +45,6 @@
   align-items: center;
   gap: 24px;
   padding-right: 16px;
+  padding-top: 16px;
 }
+

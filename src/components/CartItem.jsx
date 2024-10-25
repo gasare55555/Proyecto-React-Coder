@@ -11,6 +11,12 @@ function CartItem({item, addItem2, removeItem}) {
       addItem2(item, counter);
   }, [counter]);
 
+  function handleDecrementLimited() {
+    if (counter > 1) {
+      handleDecrement();
+    }
+  }
+
   function handleRemove() {
     removeItem(item.id);
   }
@@ -30,7 +36,7 @@ function CartItem({item, addItem2, removeItem}) {
         </div>
 
         <div className="cart-item-right">
-            <ItemQuantitySelector handleDecrement={handleDecrement} handleIncrement={handleIncrement} counter={counter} />
+            <ItemQuantitySelector handleDecrement={handleDecrementLimited} handleIncrement={handleIncrement} counter={counter} />
             <h4 className="card-text">${item.price.toFixed(2)}</h4>
         </div>
       </div>

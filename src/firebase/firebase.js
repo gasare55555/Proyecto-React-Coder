@@ -87,7 +87,7 @@ export async function sendDocument(obj, colPath) {
 
   try {
     const docRef = await addDoc(colRef, obj);
-    console.log("Nuevo item ingresado", docRef.id);
+    return docRef;
   } catch (error) {
     console.error("Error al agregar el item", error);
   }

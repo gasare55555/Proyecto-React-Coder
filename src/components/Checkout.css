@@ -7,6 +7,14 @@
   gap: 32px;
 }
 
+.cart-extra-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+  padding-inline: 16px;
+  padding-bottom: 16px;
+}
+
 .checkout-left-side {
   display: grid;
   gap: 48px;

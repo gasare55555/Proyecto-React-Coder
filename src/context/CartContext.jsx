@@ -75,6 +75,15 @@ export function CartProvider({children}) {
     return totalPrice.toFixed(2);
   }
 
+  function getOrders() {
+    return cart.map((item) => ({
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      quantity: item.quantity
+    }))
+  }
+
   function removeItem(itemId) {
     const filteredCart = cart.filter((item) => item.id != itemId);
     if (cart.length != filteredCart.length) {
@@ -89,7 +98,7 @@ export function CartProvider({children}) {
   }
 
   return (
-    <CartContext.Provider value={{addItem, addItem2, getCartQuantity, getItemQuantity, calculateTotalPrice, removeItem, clear, cart}}>
+    <CartContext.Provider value={{addItem, addItem2, getCartQuantity, getItemQuantity, calculateTotalPrice, getOrders, removeItem, clear, cart}}>
       {children}
     </CartContext.Provider>
   );
