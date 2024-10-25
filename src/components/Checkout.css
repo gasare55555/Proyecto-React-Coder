@@ -1,5 +1,5 @@
 .checkout-container {
-  padding: 32px;
+  padding: 12px;
 }
 
 .checkout-upper-side {
@@ -28,6 +28,12 @@
   text-align: start;
   color: var(--accent-color);
   padding-bottom: 16px;
+}
+
+@media (min-width: 490px) {
+  .checkout-container {
+    padding: 32px;
+  }
 }
 
 @media (min-width: 992px) {

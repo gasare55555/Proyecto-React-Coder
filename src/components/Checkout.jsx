@@ -53,7 +53,7 @@ function Checkout() {
               {formDisplay && 
               <div className="cart-form-container">
                 <h3 className="cart-title">Form</h3>
-                <CartForm totalPrice={totalPrice} getOrders={getOrders} />
+                <CartForm totalPrice={totalPrice} getOrders={getOrders} clear={clear} />
               </div>}
             </div>
 

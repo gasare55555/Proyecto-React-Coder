@@ -4,6 +4,9 @@ import AddItemButton from "./AddItemButton";
 function CartTotal({totalPrice, setFormDisplay}) {
   function showForm() {
     setFormDisplay(true);
+    setTimeout(() => {
+      window.scrollTo(0, document.body.scrollHeight);
+    }, 500);
   }
 
   console.log("CartTotal re-render");

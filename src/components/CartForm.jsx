@@ -4,7 +4,7 @@ import { sendDocument } from "../firebase/firebase";
 import AddItemButton from "./AddItemButton";
 import Swal from "sweetalert2";
 
-function CartForm({totalPrice, getOrders}) {
+function CartForm({totalPrice, getOrders, clear}) {
   const formRef = useRef();
 
   useEffect(() => {
@@ -30,6 +30,10 @@ function CartForm({totalPrice, getOrders}) {
               icon: "success",
               title: "Order submitted succesfully!",
               text: `With Id: ${orderRef.id}`
+            }).then((result) => {
+              if (result.isConfirmed) {
+                clear();
+              }
             }) :
             Swal.fire({
               icon: "error",
