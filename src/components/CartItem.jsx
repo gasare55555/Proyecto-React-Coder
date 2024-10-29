@@ -31,7 +31,7 @@ function CartItem({item, addItem2, removeItem}) {
           <img src={item.cover} alt={`${item.name} game image`} />
           <div>
             <h4 className="card-title">{item.name}</h4>
-            <button type="button" className="btn btn-outline-secondary btn-sm cart-eliminar" onClick={handleRemove}>Eliminar Item</button>
+            <button type="button" className="btn btn-outline-secondary btn-sm cart-eliminar" onClick={handleRemove}>Delete Item</button>
           </div>
         </div>
 

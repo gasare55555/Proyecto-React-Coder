@@ -1,5 +1,6 @@
 .cart-total-container-inside {
   background-color: var(--background-color);
+  min-width: 20.3125rem;
 }
 
 .cart-total {

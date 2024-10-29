@@ -8,8 +8,8 @@
   text-align: start;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-size: 13.66px;
+  gap: 1rem;
+  font-size: 0.8538rem;
 }
 
 .form-control {

@@ -32,7 +32,7 @@ function SelectAddContainer({item}) {
   return (
     <div className='select-add-container'>
       <ItemQuantitySelector handleDecrement={handleDecrement} handleIncrement={handleIncrement} counter={counter} />
-      <AddItemButton action={onAdd} content="Agregar al carrito" type="button" />
+      <AddItemButton action={onAdd} content="Add to cart" type="button" />
     </div>
   );
 }

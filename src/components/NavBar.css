@@ -3,25 +3,32 @@
 }
 
 .container-fluid {
-  padding-inline: 16px;
+  padding-inline: 1rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 36rem) {
   .container-fluid {
-    padding-inline: 38px;
+    padding-inline: 2.375rem;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 48rem) {
   .navbar-brand {
     order: 1;
   }
   .navbar-collapse {
     order: 2;
     flex-grow: unset;
-    margin-left: -15%;
+    margin-left: -3%;
   }
   #cart-toggle {
     order: 3;
   }
 }
+
+@media (min-width: 62rem) {
+  .navbar-collapse {
+    margin-left: -12%;
+  }
+}
+

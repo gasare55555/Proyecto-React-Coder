@@ -1,10 +1,8 @@
 .nav-link {
-    font-family: "NotoSansMarchen";
-    font-size: var(--p-size);
     color: var(--primary-color);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
     .nav-link {
         padding-inline: 24px !important;
     }

@@ -30,13 +30,13 @@
   padding-bottom: 16px;
 }
 
-@media (min-width: 490px) {
+@media (min-width: 30.625rem) {
   .checkout-container {
     padding: 32px;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
   .checkout-upper-side {
     grid-template-columns: 2fr 1fr;
   }

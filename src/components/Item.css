@@ -12,6 +12,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.home-col .card-body {
+  padding-block: 1.5rem;
+}
 
 .card-title, .card-subtitle, .card-text, .card-body {
   color: var(--primary-color);
