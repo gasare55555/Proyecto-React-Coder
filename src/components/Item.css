@@ -1,3 +1,8 @@
+.home-col {
+  max-width: max(70%, 280px);
+  margin-inline: auto;
+}
+
 .card-img-top {
   aspect-ratio: 284 / 350;
 }
