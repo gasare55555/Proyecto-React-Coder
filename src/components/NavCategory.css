@@ -2,6 +2,16 @@
     color: var(--primary-color);
 }
 
+.nav-link:hover {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.active {
+    color: var(--accent-color) !important;
+    font-weight: bold;
+}
+
 @media (min-width: 62rem) {
     .nav-link {
         padding-inline: 24px !important;

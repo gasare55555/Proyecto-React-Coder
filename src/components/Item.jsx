@@ -7,9 +7,9 @@ function Item({product}) {
       <div className="card h-100" >
         <img src={product.cover} className="card-img-top" alt={`${product.name} cover image`} />
         <div className="card-body">
-          <h6 className="card-title p-size">{product.name}</h6>
+          <h6 className="card-title p-size-marchen">{product.name}</h6>
           <div>
-            <h5 className="card-text h5-size">${product.price.toFixed(2)} USD</h5>
+            <h5 className="card-text h5-size-marchen">${product.price.toFixed(2)} USD</h5>
             <Link to={`/item/${product.id}`} id="card-button" className="btn btn-primary">Details</Link>
           </div>
         </div>

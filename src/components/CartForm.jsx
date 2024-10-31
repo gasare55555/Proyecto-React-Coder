@@ -1,14 +1,16 @@
 import "./CartForm.css"
-import { useEffect, useRef } from "react";
-import { sendDocument } from "../firebase/firebase";
 import AddItemButton from "./AddItemButton";
 import Swal from "sweetalert2";
+import { useEffect, useRef } from "react";
+import { sendDocument } from "../firebase/firebase";
+import { useLoad } from "../hooks/useLoad";
+import { FourSquare } from "react-loading-indicators";
 
 function CartForm({totalPrice, getOrders, clear}) {
   const formRef = useRef();
+  const {isLoading, setIsLoading} = useLoad(false);
 
   useEffect(() => {
-
     function submitForm(e) {
       e.preventDefault();
       const form = new FormData(formRef.current);
@@ -25,6 +27,13 @@ function CartForm({totalPrice, getOrders, clear}) {
             total: totalPrice
           };
           const orderRef = await sendDocument(order, "orders");
+          // const waiting = await new Promise(() => {
+          //   setTimeout(() => {
+          //     console.log("timing done");
+          //   }, 2000)
+          // });
+          
+          setIsLoading(false);
           orderRef ? 
             Swal.fire({
               icon: "success",
@@ -34,13 +43,16 @@ function CartForm({totalPrice, getOrders, clear}) {
               if (result.isConfirmed) {
                 clear();
               }
-            }) :
+            }) 
+          :
             Swal.fire({
               icon: "error",
               title: "Order couldn't be submitted!",
             });
         }
-        sendOrder();
+        setIsLoading(true);
+        sendOrder(); 
+
       } else {
         Swal.fire({
           icon: "error",
@@ -59,30 +71,36 @@ function CartForm({totalPrice, getOrders, clear}) {
   console.log("CartForm re-render");
 
   return (
-    <div className="card cart-form-container-inside">
-      <form ref={formRef} className="card-body cart-form">
-        <div>
-            <label htmlFor="name" className="form-label">Name</label>
-            <input type="text" id="name" name="name" className="form-control" required />
-        </div>
-        <div>
-            <label htmlFor="last-name" className="form-label">Last Name</label>
-            <input type="text" id="last-name" name="last-name" className="form-control" required />
-        </div>
-        <div>
-            <label htmlFor="telephone" className="form-label">Telephone Number</label>
-            <input type="tel" id="telephone" name="telephone" className="form-control" required />
-        </div>
-        <div>
-            <label htmlFor="email" className="form-label">Email</label>
-            <input type="email" id="email" name="email" className="form-control" required />
-        </div>
-        <div className="mb-4">
-            <label htmlFor="email-confirm" className="form-label">Confirm Email</label>
-            <input type="email" id="email-confirm" name="email-confirm" className="form-control" required />
-        </div>
-        <AddItemButton content="Submit Order" type="submit" />
-      </form>
+    <div className={isLoading? "loader-container" : "card cart-form-container-inside"}>
+
+      {isLoading ?
+        <FourSquare color="#E77917" style={{fontSize: "24px"}} />
+      :
+        <form ref={formRef} className="card-body cart-form">
+          <div>
+              <label htmlFor="name" className="form-label">Name</label>
+              <input type="text" id="name" name="name" className="form-control" required />
+          </div>
+          <div>
+              <label htmlFor="last-name" className="form-label">Last Name</label>
+              <input type="text" id="last-name" name="last-name" className="form-control" required />
+          </div>
+          <div>
+              <label htmlFor="telephone" className="form-label">Telephone Number</label>
+              <input type="tel" id="telephone" name="telephone" className="form-control" required />
+          </div>
+          <div>
+              <label htmlFor="email" className="form-label">Email</label>
+              <input type="email" id="email" name="email" className="form-control" required />
+          </div>
+          <div className="mb-4">
+              <label htmlFor="email-confirm" className="form-label">Confirm Email</label>
+              <input type="email" id="email-confirm" name="email-confirm" className="form-control" required />
+          </div>
+          <AddItemButton content="Submit Order" type="submit" />
+        </form>
+      }
+      
     </div>
   );
 }

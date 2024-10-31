@@ -19,22 +19,22 @@
   src: url("./assets/NotoSansMarchen-Regular.ttf");
 }
 
-.p-size {
+.p-size-marchen {
   font-size: var(--p-size);
   font-family: "NotoSansMarchen";
 }
 
-.h6-size {
+.h6-size-marchen {
   font-size: var(--h6-size);
   font-family: "NotoSansMarchen";
 }
 
-.h5-size {
+.h5-size-marchen {
   font-size: var(--h5-size);
   font-family: "NotoSansMarchen";
 }
 
-.h4-size {
+.h4-size-marchen {
   font-size: var(--h4-size);
   font-family: "NotoSansMarchen";
 }

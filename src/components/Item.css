@@ -1,5 +1,5 @@
 .home-col {
-  max-width: max(70%, 280px);
+  max-width: max(70%, 17.5rem);
   margin-inline: auto;
 }
 
@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 .home-col .card-body {
-  padding-block: 1.5rem;
+  padding-block: 24px;
 }
 
 .card-title, .card-subtitle, .card-text, .card-body {
@@ -21,8 +21,14 @@
 }
 
 #card-button {
-  margin-top: 18px;
+  margin-top: 1.5rem;
   align-self: center;
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+@media (min-width: 75rem) {
+  .home-col .card-text {
+    font-size: 1.4rem;
+  }
 }
