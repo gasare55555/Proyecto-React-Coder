@@ -1,10 +1,10 @@
 import "./CartForm.css"
-import AddItemButton from "./AddItemButton";
 import Swal from "sweetalert2";
 import { useEffect, useRef } from "react";
 import { sendDocument } from "../firebase/firebase";
 import { useLoad } from "../hooks/useLoad";
 import { FourSquare } from "react-loading-indicators";
+import CustomButton from "./CustomButton";
 
 function CartForm({totalPrice, getOrders, clear}) {
   const formRef = useRef();
@@ -27,11 +27,6 @@ function CartForm({totalPrice, getOrders, clear}) {
             total: totalPrice
           };
           const orderRef = await sendDocument(order, "orders");
-          // const waiting = await new Promise(() => {
-          //   setTimeout(() => {
-          //     console.log("timing done");
-          //   }, 2000)
-          // });
           
           setIsLoading(false);
           orderRef ? 
@@ -97,7 +92,7 @@ function CartForm({totalPrice, getOrders, clear}) {
               <label htmlFor="email-confirm" className="form-label">Confirm Email</label>
               <input type="email" id="email-confirm" name="email-confirm" className="form-control" required />
           </div>
-          <AddItemButton content="Submit Order" type="submit" />
+          <CustomButton content="Submit Order" type="submit" />
         </form>
       }
       

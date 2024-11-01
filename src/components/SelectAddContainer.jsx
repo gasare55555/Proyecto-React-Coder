@@ -4,8 +4,8 @@ import { CartContext } from '../context/CartContext';
 import { useCount } from "../hooks/useCount";
 import { useNavigate } from "react-router-dom";
 import ItemQuantitySelector from "./ItemQuantitySelector";
-import AddItemButton from "./AddItemButton";
 import Swal from "sweetalert2";
+import CustomButton from "./CustomButton";
 
 function SelectAddContainer({item}) {
   const {addItem} = useContext(CartContext);
@@ -32,7 +32,7 @@ function SelectAddContainer({item}) {
   return (
     <div className='select-add-container'>
       <ItemQuantitySelector handleDecrement={handleDecrement} handleIncrement={handleIncrement} counter={counter} />
-      <AddItemButton action={onAdd} content="Add to cart" type="button" />
+      <CustomButton action={onAdd} content="Add to cart" type="button" />
     </div>
   );
 }

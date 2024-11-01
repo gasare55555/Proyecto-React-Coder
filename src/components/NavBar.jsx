@@ -10,7 +10,7 @@ function NavBar() {
       <div className="container-fluid">
         <NavLogo />
 
-        <div id="cart-toggle" className="d-flex">
+        <div id="cart-toggle">
           <CartWidget />
           <NavToggler />
         </div>

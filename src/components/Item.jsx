@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Item.css";
+import CustomButton from "./CustomButton";
 
 function Item({product}) {
   return (
@@ -10,7 +11,9 @@ function Item({product}) {
           <h6 className="card-title p-size-marchen">{product.name}</h6>
           <div>
             <h5 className="card-text h5-size-marchen">${product.price.toFixed(2)} USD</h5>
-            <Link to={`/item/${product.id}`} id="card-button" className="btn btn-primary">Details</Link>
+            <Link to={`/item/${product.id}`}>
+              <CustomButton type="button" content="Details" />
+            </Link>
           </div>
         </div>
       </div>

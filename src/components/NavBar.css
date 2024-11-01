@@ -6,9 +6,13 @@
   padding-inline: 1rem;
 }
 
+#cart-toggle {
+  display: flex;
+}
+
 @media (min-width: 36rem) {
   .container-fluid {
-    padding-inline: 2.375rem;
+    padding-inline: 1.8rem;
   }
 }
 
@@ -31,4 +35,3 @@
     margin-left: -12%;
   }
 }
-

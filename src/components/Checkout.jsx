@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import CartTotal from "./CartTotal";
 import CartForm from "./CartForm";
-import AddItemButton from "./AddItemButton";
+import CustomButton from "./CustomButton";
 
 
 function Checkout() {
@@ -39,8 +39,8 @@ function Checkout() {
               <h3 className="cart-title">Cart</h3>
               {cart.map((item) => <CartItem key={item.id} item={item} addItem2={addItem2} removeItem={removeItem} />)}
               <div className="cart-extra-buttons">
-                <AddItemButton action={navigateHome} content={"Keep Buying"} type={"button"} />
-                <AddItemButton action={clearCart} content={"Clear Cart"} type={"button"} />
+                <CustomButton action={navigateHome} content={"Keep Buying"} type={"button"} />
+                <CustomButton action={clearCart} content={"Clear Cart"} type={"button"} />
               </div>
             </div>
 
@@ -61,7 +61,7 @@ function Checkout() {
 
           <div>
             <h4 style={{paddingBlock: "120px"}}>Cart is empty</h4>
-            <AddItemButton action={navigateHome} content={"Keep Buying"} type={"button"} />
+            <CustomButton action={navigateHome} content={"Keep Buying"} type={"button"} />
           </div>
         } 
       

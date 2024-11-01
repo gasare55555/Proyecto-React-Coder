@@ -1,5 +1,5 @@
 .home-col {
-  max-width: max(70%, 17.5rem);
+  max-width: max(85%, 17.5rem);
   margin-inline: auto;
 }
 
@@ -20,11 +20,8 @@
   color: var(--primary-color);
 }
 
-#card-button {
-  margin-top: 1.5rem;
-  align-self: center;
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+.home-col h5 {
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 75rem) {

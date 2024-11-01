@@ -6,8 +6,8 @@
     width: 170px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 36rem) {
     .navbar-brand img {
-        width: 240px;
+        width: 14.0625rem;
     }
 }

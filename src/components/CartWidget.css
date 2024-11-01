@@ -3,35 +3,40 @@
   align-items: center;
 }
 
-#cart-widget img {
+.cart-widget-link {
+  display: flex;
+  align-items: center;
+}
+
+.cart-widget-link img {
   margin-right:  2px;
-  width: 28px;
+  width: 30px;
 }
 
 .notification {
   position: relative;
-  top: 35%;
+  top: 37%;
   border: 2.7px solid var(--accent-color);
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  font-size: 10.33px;
+  font-size: 10.3296px;
   font-weight: 1000;
   color: var(--primary-color);
-  padding-top: 1px;
+  padding-top: 0.0625rem;
   font-family: "NotoSansMarchen";  
 }
 
-@media (min-width: 576px) {
+@media (min-width: 36rem) {
   #cart-widget img {
-    width: 48px;
+    width: 3rem;
     margin-right:  5px;
   }
   .notification {
-    width: 23.2px;
-    height: 23.2px;
-    font-size: 12.33px;
-    padding-top: 2px;
+    width: 1.45rem;
+    height: 1.45rem;
+    font-size: 0.7706rem;
+    padding-top: 0.125rem;
   }
 }
 

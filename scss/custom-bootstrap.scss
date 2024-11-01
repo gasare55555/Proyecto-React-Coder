@@ -1,5 +1,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 
+$primary: #E77917;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 36rem,
@@ -20,3 +22,8 @@ $container-max-widths: (
 $grid-gutter-width: 24px;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.btn-primary {
+  --bs-btn-color: white;
+  --bs-btn-hover-color: white;
+}
