@@ -36,7 +36,7 @@ function Checkout() {
 
           <div className="checkout-upper-side">
             <div className="cart-items-container">
-              <h3 className="cart-title">Cart</h3>
+              <h3 className="cart-title fs-4">Cart</h3>
               {cart.map((item) => <CartItem key={item.id} item={item} addItem2={addItem2} removeItem={removeItem} />)}
               <div className="cart-extra-buttons">
                 <CustomButton action={navigateHome} content={"Keep Buying"} type={"button"} />
@@ -44,15 +44,15 @@ function Checkout() {
               </div>
             </div>
 
-            <div className="checkout-left-side">
+            <div className="checkout-right-side">
               <div className="cart-total-container">
-                <h3 className="cart-title">Summary</h3>
+                <h3 className="cart-title fs-4">Summary</h3>
                 <CartTotal totalPrice={totalPrice} setFormDisplay={setFormDisplay} />
               </div>
               
               {formDisplay && 
               <div className="cart-form-container">
-                <h3 className="cart-title">Form</h3>
+                <h3 className="cart-title fs-4">Form</h3>
                 <CartForm totalPrice={totalPrice} getOrders={getOrders} clear={clear} />
               </div>}
             </div>

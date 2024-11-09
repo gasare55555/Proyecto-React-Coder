@@ -1,40 +1,15 @@
 :root {
   /* colors */
-  --primary-color: #130912;
-  --accent-color: #E77917;
-  --background-color: #FAFAFA;
-  /* font-sizes */
-  --small-size: 0.8331rem;
-  --p-size: 1rem;
-  --h6-size: 1.2rem;
-  --h5-size: 1.44rem;
-  --h4-size: 1.728rem;
-  --h3-size: 2.0737rem;
-  --h2-size: 2.4881rem;
-  --h1-size: 2.9863rem;
+  --primary-color: var(--bs-primary);
+  --text-color: var(--bs-body-color);
+  --background-color: var(--bs-secondary-bg);
 }
 
-@font-face {
+/* @font-face {
   font-family: "NotoSansMarchen";
   src: url("./assets/NotoSansMarchen-Regular.ttf");
-}
+} */
 
-.p-size-marchen {
-  font-size: var(--p-size);
-  font-family: "NotoSansMarchen";
-}
-
-.h6-size-marchen {
-  font-size: var(--h6-size);
-  font-family: "NotoSansMarchen";
-}
-
-.h5-size-marchen {
-  font-size: var(--h5-size);
-  font-family: "NotoSansMarchen";
-}
-
-.h4-size-marchen {
-  font-size: var(--h4-size);
-  font-family: "NotoSansMarchen";
+body {
+  overflow-x: hidden;
 }

@@ -1,5 +1,6 @@
 .navbar {
   background-color: var(--background-color);
+  padding-block: 0.7rem;
 }
 
 .container-fluid {
@@ -10,7 +11,7 @@
   display: flex;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 30.625rem) {
   .container-fluid {
     padding-inline: 1.8rem;
   }
@@ -30,8 +31,3 @@
   }
 }
 
-@media (min-width: 62rem) {
-  .navbar-collapse {
-    margin-left: -12%;
-  }
-}

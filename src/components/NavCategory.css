@@ -1,15 +1,15 @@
-.nav-link {
-    color: var(--primary-color);
-}
+/* .nav-link {
+    color: var(--text-color);
+} */
 
 .nav-link:hover {
-    color: var(--accent-color);
-    font-weight: bold;
+    color: var(--primary-color);
+    font-weight: bold !important;
 }
 
 .active {
-    color: var(--accent-color) !important;
-    font-weight: bold;
+    color: var(--primary-color) !important;
+    font-weight: bold !important;
 }
 
 @media (min-width: 62rem) {

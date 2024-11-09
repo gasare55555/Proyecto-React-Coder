@@ -7,10 +7,10 @@
   padding-block: 1px;
 }
 
-.add-btn {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-}
+/* .add-btn {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+} */
 
 .counter-btn {
   padding-inline: 14px;

@@ -1,5 +1,5 @@
 .checkout-container {
-  padding: 12px;
+  padding: 24px;
 }
 
 .checkout-upper-side {
@@ -10,24 +10,27 @@
 .cart-extra-buttons {
   display: flex;
   justify-content: end;
+  flex-wrap:wrap-reverse;
   gap: 16px;
   padding-inline: 16px;
   padding-bottom: 16px;
 }
 
-.checkout-left-side {
+.checkout-right-side {
   display: grid;
   gap: 48px;
 }
 
-.cart-total-container {
-  min-width: 336px;
-}
-
 .cart-title {
   text-align: start;
-  color: var(--accent-color);
+  color: var(--primary-color);
   padding-bottom: 16px;
+}
+
+@media (min-width: 23.4375rem) {
+  .checkout-container {
+    padding: 12px;
+  }
 }
 
 @media (min-width: 30.625rem) {
@@ -39,5 +42,8 @@
 @media (min-width: 62rem) {
   .checkout-upper-side {
     grid-template-columns: 2fr 1fr;
+  }
+  .cart-total-container {
+    min-width: 336px;
   }
 }

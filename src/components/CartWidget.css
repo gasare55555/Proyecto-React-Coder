@@ -16,27 +16,24 @@
 .notification {
   position: relative;
   top: 37%;
-  border: 2.7px solid var(--accent-color);
+  border: 2.7px solid var(--primary-color);
   border-radius: 50%;
   width: 18px;
   height: 18px;
   font-size: 10.3296px;
-  font-weight: 1000;
-  color: var(--primary-color);
-  padding-top: 0.0625rem;
-  font-family: "NotoSansMarchen";  
+  padding-right: 1px;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 23.4375rem) {
   #cart-widget img {
-    width: 3rem;
+    width: 2.8rem;
     margin-right:  5px;
   }
   .notification {
-    width: 1.45rem;
-    height: 1.45rem;
-    font-size: 0.7706rem;
-    padding-top: 0.125rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.77rem;
+    /* padding-top: 1px; */
   }
 }
 

@@ -3,11 +3,12 @@
 }
 
 .navbar-brand img {
-    width: 170px;
+    width: 128px;
+    height: auto;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 23.4375rem) {
     .navbar-brand img {
-        width: 14.0625rem;
+        width: 8.5rem;
     }
 }

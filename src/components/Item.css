@@ -16,16 +16,12 @@
   padding-block: 24px;
 }
 
-.card-title, .card-subtitle, .card-text, .card-body {
-  color: var(--primary-color);
+.home-col .card-text {
+  margin-bottom: 1.6875rem;
 }
 
-.home-col h5 {
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 75rem) {
-  .home-col .card-text {
-    font-size: 1.4rem;
+@media (min-width: 36rem) {
+  .home-col {
+    margin-inline: unset;
   }
 }

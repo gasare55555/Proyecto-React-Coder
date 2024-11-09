@@ -30,14 +30,14 @@ function CartItem({item, addItem2, removeItem}) {
         <div className="cart-item-left">
           <img src={item.cover} alt={`${item.name} game image`} />
           <div>
-            <h4 className="card-title">{item.name}</h4>
+            <h4 className="card-title fs-5">{item.name}</h4>
             <button type="button" className="btn btn-outline-secondary btn-sm cart-eliminar" onClick={handleRemove}>Delete Item</button>
           </div>
         </div>
 
         <div className="cart-item-right">
             <ItemQuantitySelector handleDecrement={handleDecrementLimited} handleIncrement={handleIncrement} counter={counter} />
-            <h4 className="card-text">${item.price.toFixed(2)}</h4>
+            <h5 className="card-text fs-5">${item.price.toFixed(2)}</h5>
         </div>
       </div>
     </div>

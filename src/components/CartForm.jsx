@@ -71,7 +71,7 @@ function CartForm({totalPrice, getOrders, clear}) {
       {isLoading ?
         <FourSquare color="#E77917" style={{fontSize: "24px"}} />
       :
-        <form ref={formRef} className="card-body cart-form">
+        <form ref={formRef} className="card-body cart-form fw-light">
           <div>
               <label htmlFor="name" className="form-label">Name</label>
               <input type="text" id="name" name="name" className="form-control" required />

@@ -10,10 +10,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
+  background-color: var(--background-color);
 }
 
 .detail-left {
-  width: 17.5rem;
+  max-width: 17.5rem;
 }
 
 .detail-body {
@@ -23,6 +24,7 @@
 .detail-section {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .detail-list {
@@ -36,7 +38,7 @@
 }
 
 .detail-right {
-  width: 26.25rem;
+  max-width: 26.25rem;
 }
 
 .detail-videos {
@@ -81,3 +83,7 @@
   width: 24px;
 }
 
+.detail-price {
+  margin-top: 7px;
+  margin-bottom: 12px;
+}

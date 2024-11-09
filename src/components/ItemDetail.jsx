@@ -37,26 +37,26 @@ function ItemDetail({item, genres, platforms, videos}) {
 
           <div className="card-body detail-body">
             <div className="detail-section">
-              <h5 className="card-subtitle">Genres</h5>
+              <h3 className="fs-6">Genres</h3>
               <p className="card-text detail-list">{genres.join(", ")}</p>
             </div>
             
             <div className="detail-section">
-              <h5 className="card-subtitle">Platforms</h5>
+              <h3 className="fs-6">Platforms</h3>
               <p className="card-text detail-list">{platforms.join(", ")}</p>
             </div>
 
             <div className="detail-rating">
               <img src={ratingStars(item.rating)} alt={`${Math.round(item.rating)} estrellas`} />
-            </div>
+            </div>                  
           </div>
         </div>
 
         <div className="detail-right">
-          <h2 className="card-title mb-2">{item.name}</h2>
+          <h2 className="card-title mb-2 fs-2">{item.name}</h2>
           <div className="card-body detail-body">
-            <p className="card-text">{item.summary}</p>
-            <h5 className="card-subtitle mb-3">Watch trailers</h5>
+            <p className="card-text mb-4">{item.summary}</p>
+            <h3 className="card-subtitle mb-3 fs-6">Watch trailers</h3>
 
             <div className="detail-videos mb-3">
               <div className="rounded-container">
@@ -64,6 +64,10 @@ function ItemDetail({item, genres, platforms, videos}) {
                 <DetailVideos key={video} video={video} /> )}
               </div>    
             </div >
+
+            <div className="detail-price">
+              <h4 className="card-text fs-5">${item.price.toFixed(2)} USD</h4>
+            </div> 
             
             <SelectAddContainer item={item}/>
             

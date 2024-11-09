@@ -1,11 +1,11 @@
 .cart-total-container-inside {
   background-color: var(--background-color);
-  min-width: 20.3125rem;
+  /* min-width: min(20.3125rem, 90vw) ; */
 }
 
 .cart-total {
-  padding-inline: 32px;
-  padding-block: 48px;
+  padding-inline: 16px;
+  padding-block: 24px;
   text-align: start;
   display: flex;
   flex-direction: column;
@@ -15,4 +15,19 @@
 .cart-total-price {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 23.4375rem) {
+  .cart-total-container-inside {
+    min-width: min(20.3125rem, 90vw) ;
+  }
+}
+
+@media (min-width: 490px) {
+  .cart-total {
+    padding-inline: 32px;
+    padding-block: 48px;
+  }
+  
 }

@@ -1,6 +1,33 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 $primary: #E77917;
+$body-color: #130912;
+$body-secondary-bg: #FAFAFA;
+$body-emphasis-color: #130912;
+
+$font-family-base: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * 2.986;
+$h2-font-size: $font-size-base * 2.488;
+$h3-font-size: $font-size-base * 2.074;
+$h4-font-size: $font-size-base * 1.728;
+$h5-font-size: $font-size-base * 1.44;
+$h6-font-size: $font-size-base * 1.2;
+$p-font-size:  $font-size-base;
+$sm-font-size: $font-size-base * 0.833;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  p: $p-font-size,
+  sm: $sm-font-size
+);
 
 $grid-breakpoints: (
   xs: 0,
@@ -24,6 +51,15 @@ $grid-gutter-width: 24px;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .btn-primary {
-  --bs-btn-color: white;
-  --bs-btn-hover-color: white;
+  @include button-variant($primary, $primary, $color: $color-contrast-light, $hover-color: $color-contrast-light, $active-color: $color-contrast-light, $disabled-color: $color-contrast-light);
 }
+
+// .fs-5 {
+//   font-size: calc(1.2rem + 0.32vw) !important;
+// }
+
+// @media (min-width: 75rem) {
+//   .fs-5 {
+//       font-size: 1.44rem !important;
+//   }
+// }
