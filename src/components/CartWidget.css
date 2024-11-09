@@ -15,25 +15,23 @@
 
 .notification {
   position: relative;
-  top: 37%;
-  border: 2.7px solid var(--primary-color);
+  top: 40%;
+  border: 2px solid var(--primary-color);
   border-radius: 50%;
   width: 18px;
   height: 18px;
   font-size: 10.3296px;
-  padding-right: 1px;
 }
 
 @media (min-width: 23.4375rem) {
   #cart-widget img {
-    width: 2.8rem;
+    width: 2.375rem;
     margin-right:  5px;
   }
   .notification {
     width: 1.25rem;
     height: 1.25rem;
-    font-size: 0.77rem;
-    /* padding-top: 1px; */
+    font-size: 0.75rem;
   }
 }
 

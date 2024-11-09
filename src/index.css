@@ -5,11 +5,6 @@
   --background-color: var(--bs-secondary-bg);
 }
 
-/* @font-face {
-  font-family: "NotoSansMarchen";
-  src: url("./assets/NotoSansMarchen-Regular.ttf");
-} */
-
 body {
   overflow-x: hidden;
 }
